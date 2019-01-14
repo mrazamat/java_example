@@ -2,7 +2,7 @@ package uz.coder.network;
 
 import java.io.IOException;
 import java.net.InetAddress;
-import java.net.UnknownHostException;
+
 
 public class Ping {
     private static void sendPingRequest(String ipAddress) throws IOException {
