@@ -21,17 +21,18 @@ public class ReadXMLFile {
             Element rootNode = document.getRootElement();
             List<Element> list = rootNode.getChildren("employee");
 
-            for (int i = 0; i < list.size(); i++) {
-                Element node = (Element) list.get(i);
+            for (Element element : list) {
+                Element node = (Element) element;
                 System.out.println("-------");
                 System.out.println("Emp No: " + node.getChildText("empNo"));
                 System.out.println("emp Name: " + node.getChildText("empName"));
                 System.out.println("HireDate: " + node.getChildText("hireDate"));
                 System.out.println("Salary: " + node.getChildText("salary"));
             }
-        } catch (JDOMException e) {
-            e.printStackTrace();
+
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JDOMException e) {
             e.printStackTrace();
         }
     }
