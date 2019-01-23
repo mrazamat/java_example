@@ -8,8 +8,8 @@ public class PositiveIntegerNumber {
         while (num > 0) {
             rev <<= 1;
             if ((int) (num & 1) == 1)
-                rev^=1;
-                num>>=1;
+                rev ^= 1;
+            num >>= 1;
 
         }
         System.out.println("The orginal number is: " + n);
